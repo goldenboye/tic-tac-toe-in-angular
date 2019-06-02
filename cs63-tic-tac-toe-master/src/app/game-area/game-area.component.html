@@ -1,0 +1,18 @@
+<app-player-details
+  *ngIf="leftPlayerCreated; else leftPlayerForm"
+  [name]="playerService.getLeftPlayerName()"
+  [symbol]="'X'"
+>
+</app-player-details>
+<ng-template #leftPlayerForm>
+  <app-player-details-form [side]="'LEFT'"></app-player-details-form>
+</ng-template>
+<app-game></app-game>
+<app-player-details
+  *ngIf="rightPlayerCreated; else rightPlayerForm"
+  [name]="playerService.getRightPlayerName()"
+  [symbol]="'O'"
+></app-player-details>
+<ng-template #rightPlayerForm>
+  <app-player-details-form [side]='RIGHT'></app-player-details-form>
+</ng-template>

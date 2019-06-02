@@ -1,0 +1,47 @@
+<form #playerForm="ngForm" (ngSubmit)="onSubmit(playerForm)">
+  <div class="group">
+    <label>Name</label>
+    <input
+      #name="ngModel"
+      ngModel
+      name="name"
+      type="text"
+      autocomplete="off"
+      minlength="3"
+    />
+    <div *ngIf="name.invalid">Minimum Length is 3 characters</div>
+  </div>
+  <ng-container ngModelGroup="security">
+    <div class="group">
+      <label>
+        Security Question
+      </label>
+      <select ngModel="number" name="question">
+        <option value="mother">What's your mother's name?</option>
+        <option value="number">What's your favorite number?</option>
+        <option value="food">What's your favorite food?</option>
+      </select>
+    </div>
+    <div class="group">
+      <label>Answer</label>
+      <input
+        #answer="ngModel"
+        ngModel
+        name="answer"
+        type="text"
+        autocomplete="off"
+        required
+      />
+      <div *ngIf="answer.touched && answer.invalid">Answer is required</div>
+    </div>
+  </ng-container>
+  <!-- <p style="width: 5rem;">{{ f.value | json }}</p> -->
+  <button
+    [disabled]="!playerForm.touched || playerForm.invalid"
+    type="submit"
+    class="create-button"
+  >
+    Create
+  </button>
+</form>
+<button (click)="onLoadExistingUser()">Load existing</button>

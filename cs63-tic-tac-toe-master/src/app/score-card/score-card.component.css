@@ -1,0 +1,7 @@
+:host {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3rem;
+  flex-basis: 20%;
+  align-items: center;
+}

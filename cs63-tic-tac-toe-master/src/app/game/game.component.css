@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.game-table {
+  border-collapse: collapse;
+  user-select: none;
+}
+
+.game-cell {
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.game-cell:hover {
+  background: #ccc;
+}
+
+.game-cell-played {
+  pointer-events: none;
+}

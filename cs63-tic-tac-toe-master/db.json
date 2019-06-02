@@ -1,0 +1,12 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Test",
+      "security": {
+        "question": "number",
+        "answer": "6"
+      }
+    }
+  ]
+}

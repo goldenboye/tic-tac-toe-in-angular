@@ -1,0 +1,16 @@
+<table class="game-table">
+  <tbody>
+    <tr *ngFor="let row of grid; index as rowIdx" class="game-row">
+      <td
+        *ngFor="let cell of row; index as colIdx"
+        (click)="onCellClicked(rowIdx, colIdx)"
+        class="game-cell"
+        [ngClass]="{
+          'game-cell-played': grid[rowIdx][colIdx]
+        }"
+      >
+        {{ cell }}
+      </td>
+    </tr>
+  </tbody>
+</table>

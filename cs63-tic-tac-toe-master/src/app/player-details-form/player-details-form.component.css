@@ -1,0 +1,16 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.group label {
+  margin-bottom: 0.5rem;
+}
+.create-button {
+  margin-bottom: 0.5rem;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
